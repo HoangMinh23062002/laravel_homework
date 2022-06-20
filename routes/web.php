@@ -52,6 +52,7 @@ use App\Http\Controllers\sumController;
 use App\Http\Controllers\Authentication;
 use App\Http\Controllers\MasterController;
 use App\Http\Requests\Signup;
+use App\Http\Controllers\createTable;
 
 Route::get(
     '/',
@@ -91,4 +92,10 @@ Route::post('admin',[HomeController::class,'addRoom']);
 
 // Route::get('/signup',[Authentication::class,'signup']);
 // Route::post('/signup',[Authentication::class,'displayInfor']);
-Route::get('/',[MasterController::class,'getIndex']);
+// Route::get('/',[MasterController::class,'getIndex']);
+// route::get('database', function()){
+//     $chema::create('minhngu',function($table)(
+
+//     ))
+// }
+Route::get('/',[createTable::class,'productTable']);
